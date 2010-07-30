@@ -1,0 +1,6 @@
+tagCloud:
+  caption:
+    ja_JP: "タグクラウド"
+  description:
+    ja_JP: "登録件数の多いタグをタグクラウドとして表示"
+  component: [tag, cloud]

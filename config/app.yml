@@ -1,0 +1,3 @@
+all:
+  tag_separator: ","
+  tag_separator_caption: "半角コンマ"

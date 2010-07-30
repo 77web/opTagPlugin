@@ -1,0 +1,15 @@
+
+Tag:
+  actAs: [Timestampable]
+  columns:
+    id: { type: integer(11), primary: true, autoincrement: true }
+    name: string(255)
+    foreign_table: string(40)
+    foreign_id: integer(11)
+    member_id: integer(4)
+    community_id: integer(11)
+  relations:
+    Member:
+      onDelete: cascade
+    Community:
+      onDelete: cascade

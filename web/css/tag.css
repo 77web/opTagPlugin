@@ -1,0 +1,26 @@
+div.tagCloud
+{
+  border:1px solid #999999;
+}
+
+div.tagCloud ul
+{
+  margin:5px 10px;
+}
+
+div.tagCloud ul li
+{
+  display:inline;
+}
+li.tag_1
+{
+  font-size: xx-large;
+}
+li.tag_2
+{
+  font-size: large;
+}
+li.tag_3
+{
+  font-size: small;
+}

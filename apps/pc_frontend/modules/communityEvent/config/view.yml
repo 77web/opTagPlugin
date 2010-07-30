@@ -1,0 +1,15 @@
+newSuccess:
+  customize:
+    tagForm:
+      template: [tag, form]
+      parts: [formCommunityEvent]
+      target: [lastRow]
+      is_component: true
+
+editSuccess:
+  customize:
+    tagForm:
+      template: [tag, form]
+      parts: [formCommunityEvent]
+      target: [lastRow]
+      is_component: true
