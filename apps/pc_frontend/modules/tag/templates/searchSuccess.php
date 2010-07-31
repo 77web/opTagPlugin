@@ -1,8 +1,10 @@
+<?php foreach($types as $type): ?>
+
 <div class="parts">
 <div class="partsHeading">
-<h3><?php echo __('Search Result for tag "%name%"', array("%name%"=>$tag)); ?></h3>
+<h3><?php echo __('Search Result for tag "%name%" in %type%', array("%name%"=>$tag, "%type%"=>__($type))); ?></h3>
 </div>
-
+<?php $pager = $pagers[$type]; ?>
 <div class="block">
 <?php if($pager->getNbResults()>0): ?>
 <?php op_include_pager_navigation($pager, "tag/search?tag=".$tag."&page=%s"); ?>
@@ -20,3 +22,5 @@
 
 </div>
 </div>
+
+<?php endforeach; ?>

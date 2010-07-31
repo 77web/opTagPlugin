@@ -91,9 +91,52 @@ class PluginTagTable extends Doctrine_Table
     return $ranks;
   }
   
-  public function getPager($tag, $size, $page=1)
+  public function getPager($tag, $foreignTable, $memberId, $size, $page=1)
   {
-    $q = $this->createQuery()->where("name=?", $tag)->orderBy("updated_at DESC");
+    $q = $this->createQuery("t")->select("t.*")->where("t.name=?", $tag)->orderBy("t.updated_at DESC")->addFrom($foreignTable." f")->addWhere("f.id = t.foreign_id AND t.foreign_table = ?", $foreignTable);
+    
+    switch($foreignTable)
+    {
+      case "Diary":
+        if($memberId>0)
+        {
+          $q->addWhere("f.public_flag = ? OR f.public_flag = ?", array(DiaryTable::PUBLIC_FLAG_OPEN, DiaryTable::PUBLIC_FLAG_SNS));
+        }
+        else
+        {
+          $q->addWhere("f.public_flag = ?", DiaryTable::PUBLIC_FLAG_OPEN);
+        }
+        break;
+      case "CommunityTopic":
+      case "CommunityEvent":
+        $communityQuery = Doctrine::getTable("CommunityConfig")->createQuery("cc")->select("cc.community_id")->where("cc.name = 'public_flag'");
+        if($memberId>0)
+        {
+          $communityQuery->addWhere("cc.value != 'auth_commu_member'");
+        }
+        else
+        {
+          //!!attention!! will be active only after community's open to web launched.
+          $communityQuery->addWhere("cc.value = 'open'");
+        }
+        $communityIdList = array();
+        foreach($communityQuery->execute() as $communityConfig)
+        {
+          $communityIdList[] = $communityConfig->getCommunityId();
+        }
+        if(count($communityIdList)>0)
+        {
+          $q->andWhereIn("f.community_id", $communityIdList);
+        }
+        else
+        {
+          //if no community matches the public_flag, no contents to get
+          $q->addWhere("f.community_id = 0");
+        }
+        break;
+    }
+    
+    
     $pager = new sfDoctrinePager("Tag", $size);
     $pager->setQuery($q);
     $pager->setPage($page);

@@ -19,8 +19,20 @@
         <target>タグ検索</target>
       </trans-unit>
       <trans-unit id="">
-        <source>Search Result for tag "%name%"</source>
-        <target>タグ「%name%」の検索結果</target>
+        <source>Search Result for tag "%name%" in %type%</source>
+        <target>%type%のタグ「%name%」の検索結果</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>CommunityTopic</source>
+        <target>トピック</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>CommunityEvent</source>
+        <target>イベント</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>No contents matches.</source>
+        <target>該当するコンテンツがありません。</target>
       </trans-unit>
     </body>
   </file>
