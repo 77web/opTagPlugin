@@ -13,3 +13,11 @@ editSuccess:
       parts: [diaryForm]
       target: [formBottom]
       is_component: true
+
+showSuccess:
+  customize:
+    tagShow:
+      template: [tag, show]
+      parts: [diaryBody]
+      target: [top]
+      is_component: true

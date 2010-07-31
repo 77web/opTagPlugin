@@ -24,4 +24,22 @@ class opTagPluginTagComponents extends sfComponents
       $this->tagForm->setForeignObj($this->communityTopic);
     }
   }
+  
+  public function executeShow($request)
+  {
+    $this->isTable = false;
+    if(isset($this->diary))
+    {
+      $this->tags = Doctrine::getTable("Tag")->getTags($this->diary->getId(), "Diary");
+    }
+    if(isset($this->communityEvent))
+    {
+      $this->tags = Doctrine::getTable("Tag")->getTags($this->communityEvent->getId(), "CommunityEvent");
+      $this->isTable = true;
+    }
+    if(isset($this->communityTopic))
+    {
+      $this->tags = Doctrine::getTable("Tag")->getTags($this->communityTopic->getId(), "CommunityTopic");
+    }
+  }
 }

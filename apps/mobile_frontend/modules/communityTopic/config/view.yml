@@ -13,3 +13,11 @@ editSuccess:
       parts: [formCommunityTopic]
       target: [formBottom]
       is_component: true
+
+showSuccess:
+  customize:
+    tagShow:
+      template: [tag, show]
+      parts: [topicBody]
+      target: [top]
+      is_component: true

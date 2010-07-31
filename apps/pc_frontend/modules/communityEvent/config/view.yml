@@ -13,3 +13,11 @@ editSuccess:
       parts: [formCommunityEvent]
       target: [lastRow]
       is_component: true
+
+showSuccess:
+  customize:
+    tagForm:
+      template: [tag, show]
+      parts: [communityEvent]
+      target: [lastRow]
+      is_component: true

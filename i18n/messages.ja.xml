@@ -11,6 +11,10 @@
         <target>タグ</target>
       </trans-unit>
       <trans-unit id="">
+        <source>Tags</source>
+        <target>タグ</target>
+      </trans-unit>
+      <trans-unit id="">
         <source>Search tagged contents</source>
         <target>タグ検索</target>
       </trans-unit>
