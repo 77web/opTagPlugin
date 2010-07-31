@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.7.2" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+    http://pear.php.net/dtd/tasks-1.0.xsd
+    http://pear.php.net/dtd/package-2.0
+    http://pear.php.net/dtd/package-2.0.xsd">
+ <name>opTagPlugin</name>
+ <channel>plugins.openpne.jp</channel>
+ <summary>タグ付け</summary>
+ <description>コアにバンドルされているopDiaryPlugin, opCommunityTopicPluginを前提にしたタグ付け＆タグクラウド表示を行うプラグイン。
+
+＊タグクラウドはgadgetになっています。インストール後pc_backend＞デザイン設定　より該当のガジェットを追加してご利用ください。</description>
+ <lead>
+  <name>hissy</name>
+  <user>77web</user>
+  <email />
+  <active>yes</active>
+ </lead>
+ <date>2010-07-31</date>
+ <time>16:35:19</time>
+ <version>
+  <release>0.9.0</release>
+  <api>0.9.0</api>
+ </version>
+ <stability>
+  <release>beta</release>
+  <api>beta</api>
+ </stability>
+ <license>PHP</license>
+ <notes>beta release</notes>
+ <contents>
+  <dir baseinstalldir="/" name="/">
+   <file baseinstalldir="/" md5sum="fb2df520af9bc20f8a328a88a1d7c424" name="apps/mobile_frontend/modules/communityEvent/config/view.yml" role="data" />
+   <file baseinstalldir="/" md5sum="21db205b3200882eb3c331d203e3af10" name="apps/mobile_frontend/modules/communityTopic/config/view.yml" role="data" />
+   <file baseinstalldir="/" md5sum="05de32224b054fab1c962e8f912c0066" name="apps/mobile_frontend/modules/diary/config/view.yml" role="data" />
+   <file baseinstalldir="/" md5sum="047518dd02fb6b8717c920362c71bce9" name="apps/mobile_frontend/modules/tag/actions/actions.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="7206167afb4217fdc33d035b76920329" name="apps/mobile_frontend/modules/tag/actions/components.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="3d4e1ba6f17821fe86609cb6fd9436cb" name="apps/mobile_frontend/modules/tag/templates/searchSuccess.php" role="data" />
+   <file baseinstalldir="/" md5sum="f6e55f99011a3964f28e3d0edcd8fc0f" name="apps/mobile_frontend/modules/tag/templates/_cloud.php" role="data" />
+   <file baseinstalldir="/" md5sum="5630972dd7962613df0d809c9586e851" name="apps/mobile_frontend/modules/tag/templates/_form.php" role="data" />
+   <file baseinstalldir="/" md5sum="cfa080061e8a6ed008d4f3e3e467214c" name="apps/mobile_frontend/modules/tag/templates/_show.php" role="data" />
+   <file baseinstalldir="/" md5sum="2e3914ab21542e9673fa60c47718387b" name="apps/pc_frontend/modules/communityEvent/config/view.yml" role="data" />
+   <file baseinstalldir="/" md5sum="e8742afa3b9af3898e85a574d1c86870" name="apps/pc_frontend/modules/communityTopic/config/view.yml" role="data" />
+   <file baseinstalldir="/" md5sum="7deb0f70fb810805fca32498b2187fc7" name="apps/pc_frontend/modules/diary/config/view.yml" role="data" />
+   <file baseinstalldir="/" md5sum="047518dd02fb6b8717c920362c71bce9" name="apps/pc_frontend/modules/tag/actions/actions.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="2d8f359c9ec6483a3ae222f86e6f3b93" name="apps/pc_frontend/modules/tag/actions/components.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="e0f5369854f0c121e1444b2752bcf453" name="apps/pc_frontend/modules/tag/templates/searchSuccess.php" role="data" />
+   <file baseinstalldir="/" md5sum="35c78503264e3bcaf1252a7285691e5a" name="apps/pc_frontend/modules/tag/templates/_cloud.php" role="data" />
+   <file baseinstalldir="/" md5sum="5630972dd7962613df0d809c9586e851" name="apps/pc_frontend/modules/tag/templates/_form.php" role="data" />
+   <file baseinstalldir="/" md5sum="9004acbf1f0ef8d1497a91c3fd09542f" name="apps/pc_frontend/modules/tag/templates/_show.php" role="data" />
+   <file baseinstalldir="/" md5sum="0a86bd010da57cffef899bd90459c480" name="config/app.yml" role="data" />
+   <file baseinstalldir="/" md5sum="9c9f3f111adf24d3fa03c6b6827f8493" name="config/config.php" role="data" />
+   <file baseinstalldir="/" md5sum="ebbfe55d1d2cffb3f375ecfab54b62c5" name="config/gadget.yml" role="data" />
+   <file baseinstalldir="/" md5sum="ebbfe55d1d2cffb3f375ecfab54b62c5" name="config/mobile_gadget.yml" role="data" />
+   <file baseinstalldir="/" md5sum="04602d81b4f2a3d092cdc48d30ab01a8" name="config/doctrine/schema.yml" role="data" />
+   <file baseinstalldir="/" md5sum="22affd79e1883bbdccf2de03fdf97665" name="i18n/messages.ja.xml" role="data" />
+   <file baseinstalldir="/" md5sum="d2211d5e7ff1bfe039007fc1cb8e3d67" name="lib/opTagRegister.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="f64cf8903b61fcbaef62881a9c113495" name="lib/opTagRemover.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="32b8a6c84cb2d6e5a94889af1e72d3be" name="lib/action/opTagPluginTagActions.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="53737bfebcb32d962e6a766641c949ce" name="lib/action/opTagPluginTagComponents.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="66a407a896280f61e6bce737dffc713f" name="lib/filter/doctrine/PluginTagFormFilter.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="bba003b0cbe6241c0e2b3cbb6e0a82e9" name="lib/form/doctrine/PluginTagForm.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="941d98e0e1ddc12128ecc0485f9ba911" name="lib/model/doctrine/PluginTag.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="aa8eee1d29a28466c8e871b0c383ef3a" name="lib/model/doctrine/PluginTagTable.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="93ff5f73b68bdfae96eadbc75df9c05b" name="lib/task/opTagTestTask.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="ad38739d4515195aad66ba3de9c79100" name="web/css/tag.css" role="data" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.3</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0</min>
+   </pearinstaller>
+   <package>
+    <name>symfony</name>
+    <channel>pear.symfony-project.com</channel>
+    <min>1.2.0</min>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>0.9.0</release>
+    <api>0.9.0</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2010-07-31</date>
+   <license>PHP</license>
+   <notes>beta release</notes>
+  </release>
+ </changelog>
+</package>

@@ -1,0 +1,5 @@
+This plugin provides OpenPNE3.x tag entry&save interface, tag cloud, tag search.
+
+depends on: opDiaryPlugin, opCommunityTopicPlugin
+
+tips & notes here: http://wiki.github.com/77web/opTagPlugin/
