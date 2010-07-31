@@ -16,4 +16,9 @@
  */
 class tagComponents extends opTagPluginTagComponents
 {
+  public function executeShow($request)
+  {
+    parent::executeShow($request);
+    $this->isTable = false;
+  }
 }
