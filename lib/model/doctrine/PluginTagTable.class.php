@@ -64,40 +64,28 @@ class PluginTagTable extends Doctrine_Table
   
   public function getTagRank($size, $page=1)
   {
-    $obj_list = $this->createQuery("t")->select("t.name, count(t.id) as cnt")->groupBy("t.name")->orderBy("cnt DESC")->limit($size)->offset($size*($page-1))->execute();
-    
-    $ranks = array();
-    $i = 0;
-    foreach($obj_list as $obj)
-    {
-      if($i<=5)
-      {
-        $ranks[] = array("tag"=>$obj->getName(), "level"=>1);
-      }
-      elseif($i<=10)
-      {
-        $ranks[] = array("tag"=>$obj->getName(), "level"=>2);
-      }
-      else
-      {
-        $ranks[] = array("tag"=>$obj->getName(), "level"=>3);
-      }
-            
-      $i++;
-    }
-    shuffle($ranks);
-    
-    
-    return $ranks;
+    $query = $this->createRankQuery('t');
+    return $this->generateCloud($query, $size, $page);
   }
 
   public function getTagRankMember($memberId, $size, $page=1)
   {
-    $obj_list = $this->createQuery("t")->select("t.name, count(t.id) as cnt")->addWhere('t.member_id = ?', $memberId)->groupBy("t.name")->orderBy("cnt DESC")->limit($size)->offset($size*($page-1))->execute();
+    $query = $this->createRankQuery('t')->addWhere('t.member_id = ?', $memberId);
+    return $this->generateCloud($query, $size, $page);
+  }
+
+  private function createRankQuery($name = 't')
+  {
+    return $this->createQuery($name)->select($name.'.name, count('.$name.'.id) as cnt")->groupBy($name.".name")->orderBy("cnt DESC");
+  }
+  
+  private function generateCloud($query, $size, $page = 1)
+  {
+    $query->limit($size)->offset($size*($page-1));
     
     $ranks = array();
     $i = 0;
-    foreach($obj_list as $obj)
+    foreach($query->execute() as $obj)
     {
       if($i<=5)
       {
@@ -111,6 +99,9 @@ class PluginTagTable extends Doctrine_Table
       {
         $ranks[] = array("tag"=>$obj->getName(), "level"=>3);
       }
+      
+      $obj->free(true);
+      unset($obj);
             
       $i++;
     }
