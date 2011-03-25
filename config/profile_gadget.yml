@@ -1,0 +1,6 @@
+memberTagCloud:
+  caption:
+    ja_JP: "メンバーのタグクラウド"
+  description:
+    ja_JP: "該当メンバーの登録件数の多いタグをタグクラウドとして表示"
+  component: [tag, memberCloud]
