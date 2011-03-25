@@ -76,7 +76,7 @@ class PluginTagTable extends Doctrine_Table
 
   private function createRankQuery($name = 't')
   {
-    return $this->createQuery($name)->select($name.'.name, count('.$name.'.id) as cnt")->groupBy($name.".name")->orderBy("cnt DESC");
+    return $this->createQuery($name)->select($name.'.name, count('.$name.'.id) as cnt')->groupBy($name.'.name')->orderBy("cnt DESC");
   }
   
   private function generateCloud($query, $size, $page = 1)
