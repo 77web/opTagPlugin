@@ -7,6 +7,15 @@ class opTagPluginTagComponents extends sfComponents
     $this->tag_list = Doctrine::getTable("Tag")->getTagRank(30, 1);
     $this->getResponse()->addStylesheet("/opTagPlugin/css/tag.css");
   }
+
+  public function executeMemberCloud($request)
+  {
+    if($this->member)
+    {
+      $this->tag_list = Doctrine::getTable("Tag")->getTagRankMember($this->member->getId(), 30, 1);
+      $this->getResponse()->addStylesheet("/opTagPlugin/css/tag.css");
+    }
+  }
   
   public function executeForm($request)
   {

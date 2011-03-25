@@ -90,6 +90,35 @@ class PluginTagTable extends Doctrine_Table
     
     return $ranks;
   }
+
+  public function getTagRankMember($memberId, $size, $page=1)
+  {
+    $obj_list = $this->createQuery("t")->select("t.name, count(t.id) as cnt")->addWhere('t.member_id = ?', $memberId)->groupBy("t.name")->orderBy("cnt DESC")->limit($size)->offset($size*($page-1))->execute();
+    
+    $ranks = array();
+    $i = 0;
+    foreach($obj_list as $obj)
+    {
+      if($i<=5)
+      {
+        $ranks[] = array("tag"=>$obj->getName(), "level"=>1);
+      }
+      elseif($i<=10)
+      {
+        $ranks[] = array("tag"=>$obj->getName(), "level"=>2);
+      }
+      else
+      {
+        $ranks[] = array("tag"=>$obj->getName(), "level"=>3);
+      }
+            
+      $i++;
+    }
+    shuffle($ranks);
+    
+    
+    return $ranks;
+  }
   
   public function getPager($tag, $foreignTable, $memberId, $size, $page=1)
   {
