@@ -7,7 +7,7 @@ Tag:
     foreign_table: string(40)
     foreign_id: integer(11)
     member_id: integer(4)
-    community_id: integer(11)
+    community_id: integer(4)
   relations:
     Member:
       onDelete: cascade
