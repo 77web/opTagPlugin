@@ -7,62 +7,71 @@
  <channel>plugins.openpne.jp</channel>
  <summary>タグ付け</summary>
  <description>コアにバンドルされているopDiaryPlugin, opCommunityTopicPluginを前提にしたタグ付け＆タグクラウド表示を行うプラグイン。
+詳細情報はhttp://wiki.github.com/77web/opTagPlugin/
 
 ＊タグクラウドはgadgetになっています。インストール後pc_backend＞デザイン設定　より該当のガジェットを追加してご利用ください。</description>
  <lead>
-  <name>hissy</name>
+  <name>77web</name>
   <user>77web</user>
   <email />
   <active>yes</active>
  </lead>
- <date>2010-07-31</date>
- <time>16:35:19</time>
+ <date>2011-03-26</date>
+ <time>11:21:02</time>
  <version>
-  <release>0.9.0</release>
-  <api>0.9.0</api>
+  <release>0.9.1</release>
+  <api>0.9.1</api>
  </version>
  <stability>
   <release>beta</release>
   <api>beta</api>
  </stability>
  <license>PHP</license>
- <notes>beta release</notes>
+ <notes>second beta release</notes>
  <contents>
   <dir baseinstalldir="/" name="/">
    <file baseinstalldir="/" md5sum="fb2df520af9bc20f8a328a88a1d7c424" name="apps/mobile_frontend/modules/communityEvent/config/view.yml" role="data" />
    <file baseinstalldir="/" md5sum="21db205b3200882eb3c331d203e3af10" name="apps/mobile_frontend/modules/communityTopic/config/view.yml" role="data" />
    <file baseinstalldir="/" md5sum="05de32224b054fab1c962e8f912c0066" name="apps/mobile_frontend/modules/diary/config/view.yml" role="data" />
-   <file baseinstalldir="/" md5sum="047518dd02fb6b8717c920362c71bce9" name="apps/mobile_frontend/modules/tag/actions/actions.class.php" role="data" />
-   <file baseinstalldir="/" md5sum="7206167afb4217fdc33d035b76920329" name="apps/mobile_frontend/modules/tag/actions/components.class.php" role="data" />
-   <file baseinstalldir="/" md5sum="3d4e1ba6f17821fe86609cb6fd9436cb" name="apps/mobile_frontend/modules/tag/templates/searchSuccess.php" role="data" />
-   <file baseinstalldir="/" md5sum="f6e55f99011a3964f28e3d0edcd8fc0f" name="apps/mobile_frontend/modules/tag/templates/_cloud.php" role="data" />
+   <file baseinstalldir="/" md5sum="6576c8ad747aea4ff7765f5fd097235c" name="apps/mobile_frontend/modules/tag/actions/actions.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="b9668033ca6a8b2c297de8b84c826c0c" name="apps/mobile_frontend/modules/tag/actions/components.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="97d20b12b118e5b0d623177bc9e02009" name="apps/mobile_frontend/modules/tag/templates/searchSuccess.php" role="data" />
+   <file baseinstalldir="/" md5sum="ee5ae86888f34226a68afbe2be82a3b8" name="apps/mobile_frontend/modules/tag/templates/_cloud.php" role="data" />
    <file baseinstalldir="/" md5sum="5630972dd7962613df0d809c9586e851" name="apps/mobile_frontend/modules/tag/templates/_form.php" role="data" />
-   <file baseinstalldir="/" md5sum="cfa080061e8a6ed008d4f3e3e467214c" name="apps/mobile_frontend/modules/tag/templates/_show.php" role="data" />
+   <file baseinstalldir="/" md5sum="ee5ae86888f34226a68afbe2be82a3b8" name="apps/mobile_frontend/modules/tag/templates/_memberCloud.php" role="data" />
+   <file baseinstalldir="/" md5sum="da7c096aeb9bd93194ca0224869039df" name="apps/mobile_frontend/modules/tag/templates/_show.php" role="data" />
    <file baseinstalldir="/" md5sum="2e3914ab21542e9673fa60c47718387b" name="apps/pc_frontend/modules/communityEvent/config/view.yml" role="data" />
    <file baseinstalldir="/" md5sum="e8742afa3b9af3898e85a574d1c86870" name="apps/pc_frontend/modules/communityTopic/config/view.yml" role="data" />
    <file baseinstalldir="/" md5sum="7deb0f70fb810805fca32498b2187fc7" name="apps/pc_frontend/modules/diary/config/view.yml" role="data" />
-   <file baseinstalldir="/" md5sum="047518dd02fb6b8717c920362c71bce9" name="apps/pc_frontend/modules/tag/actions/actions.class.php" role="data" />
-   <file baseinstalldir="/" md5sum="2d8f359c9ec6483a3ae222f86e6f3b93" name="apps/pc_frontend/modules/tag/actions/components.class.php" role="data" />
-   <file baseinstalldir="/" md5sum="e0f5369854f0c121e1444b2752bcf453" name="apps/pc_frontend/modules/tag/templates/searchSuccess.php" role="data" />
-   <file baseinstalldir="/" md5sum="35c78503264e3bcaf1252a7285691e5a" name="apps/pc_frontend/modules/tag/templates/_cloud.php" role="data" />
+   <file baseinstalldir="/" md5sum="6576c8ad747aea4ff7765f5fd097235c" name="apps/pc_frontend/modules/tag/actions/actions.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="9604d902e7d43536cef62d308ac7ef6a" name="apps/pc_frontend/modules/tag/actions/components.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="da6985b07510a386eb88966e2e2dcaa4" name="apps/pc_frontend/modules/tag/templates/searchSuccess.php" role="data" />
+   <file baseinstalldir="/" md5sum="6d4202ebc587c8fbab0a07094702c2b1" name="apps/pc_frontend/modules/tag/templates/_cloud.php" role="data" />
    <file baseinstalldir="/" md5sum="5630972dd7962613df0d809c9586e851" name="apps/pc_frontend/modules/tag/templates/_form.php" role="data" />
-   <file baseinstalldir="/" md5sum="9004acbf1f0ef8d1497a91c3fd09542f" name="apps/pc_frontend/modules/tag/templates/_show.php" role="data" />
+   <file baseinstalldir="/" md5sum="6d4202ebc587c8fbab0a07094702c2b1" name="apps/pc_frontend/modules/tag/templates/_memberCloud.php" role="data" />
+   <file baseinstalldir="/" md5sum="fb71a092f068fc57e87ea400991dce10" name="apps/pc_frontend/modules/tag/templates/_show.php" role="data" />
    <file baseinstalldir="/" md5sum="0a86bd010da57cffef899bd90459c480" name="config/app.yml" role="data" />
-   <file baseinstalldir="/" md5sum="9c9f3f111adf24d3fa03c6b6827f8493" name="config/config.php" role="data" />
+   <file baseinstalldir="/" md5sum="c3bb8d517e9639b6fdb91d4ff38b1f84" name="config/config.php" role="data" />
    <file baseinstalldir="/" md5sum="ebbfe55d1d2cffb3f375ecfab54b62c5" name="config/gadget.yml" role="data" />
    <file baseinstalldir="/" md5sum="ebbfe55d1d2cffb3f375ecfab54b62c5" name="config/mobile_gadget.yml" role="data" />
-   <file baseinstalldir="/" md5sum="04602d81b4f2a3d092cdc48d30ab01a8" name="config/doctrine/schema.yml" role="data" />
-   <file baseinstalldir="/" md5sum="22affd79e1883bbdccf2de03fdf97665" name="i18n/messages.ja.xml" role="data" />
-   <file baseinstalldir="/" md5sum="d2211d5e7ff1bfe039007fc1cb8e3d67" name="lib/opTagRegister.class.php" role="data" />
-   <file baseinstalldir="/" md5sum="f64cf8903b61fcbaef62881a9c113495" name="lib/opTagRemover.class.php" role="data" />
-   <file baseinstalldir="/" md5sum="32b8a6c84cb2d6e5a94889af1e72d3be" name="lib/action/opTagPluginTagActions.class.php" role="data" />
-   <file baseinstalldir="/" md5sum="53737bfebcb32d962e6a766641c949ce" name="lib/action/opTagPluginTagComponents.class.php" role="data" />
-   <file baseinstalldir="/" md5sum="66a407a896280f61e6bce737dffc713f" name="lib/filter/doctrine/PluginTagFormFilter.class.php" role="data" />
-   <file baseinstalldir="/" md5sum="bba003b0cbe6241c0e2b3cbb6e0a82e9" name="lib/form/doctrine/PluginTagForm.class.php" role="data" />
-   <file baseinstalldir="/" md5sum="941d98e0e1ddc12128ecc0485f9ba911" name="lib/model/doctrine/PluginTag.class.php" role="data" />
-   <file baseinstalldir="/" md5sum="aa8eee1d29a28466c8e871b0c383ef3a" name="lib/model/doctrine/PluginTagTable.class.php" role="data" />
-   <file baseinstalldir="/" md5sum="93ff5f73b68bdfae96eadbc75df9c05b" name="lib/task/opTagTestTask.class.php" role="data" />
-   <file baseinstalldir="/" md5sum="ad38739d4515195aad66ba3de9c79100" name="web/css/tag.css" role="data" />
+   <file baseinstalldir="/" md5sum="d2b4289f8470254f307d1f38b5baf710" name="config/profile_gadget.yml" role="data" />
+   <file baseinstalldir="/" md5sum="1935358721c0541c23ad2195fb9a5847" name="config/doctrine/schema.yml" role="data" />
+   <file baseinstalldir="/" md5sum="3fc9cd33e6f01c07a58dac253a1a0217" name="i18n/messages.ja.xml" role="data" />
+   <file baseinstalldir="/" md5sum="f033836035654fe6de303ba0ec630a6d" name="lib/opTagRegister.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="f62a9dd85a36b6e23b11fb10e4fe8296" name="lib/opTagRemover.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="5e847a8504bcaef3cf0403a9d3f0fd00" name="lib/action/opTagPluginTagActions.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="04865b85b922fe8cf48a28a55510cc24" name="lib/action/opTagPluginTagComponents.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="b6e487a635ee57b7c008e49d087f0dfb" name="lib/filter/doctrine/PluginTagFormFilter.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="113038d48f00cde88103cb53cea1aad5" name="lib/form/doctrine/PluginTagForm.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="e3b4bf7649ce68d8a6f189e688e6cc2e" name="lib/model/doctrine/PluginTag.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="7fe51bbc473996002f49b204e1a9f225" name="lib/model/doctrine/PluginTagTable.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="b8464c36a8b770a4e85b2fc79285a1bf" name="patch/opCommunityTopicPlugin/apps/mobile_frontend/modules/communityEvent/templates/showSuccess.php" role="data" />
+   <file baseinstalldir="/" md5sum="bcaaeae6f9e61b2e8f88976435fbe81c" name="patch/opCommunityTopicPlugin/apps/mobile_frontend/modules/communityTopic/templates/showSuccess.php" role="data" />
+   <file baseinstalldir="/" md5sum="15f50478660f56a09976476f000baead" name="patch/opCommunityTopicPlugin/apps/pc_frontend/modules/communityTopic/templates/showSuccess.php" role="data" />
+   <file baseinstalldir="/" md5sum="b5581152b674011d4da68fce00cc48fd" name="patch/opDiaryPlugin/apps/mobile_frontend/modules/diary/templates/showSuccess.php" role="data" />
+   <file baseinstalldir="/" md5sum="5c1e041746c0eb82c2cb514146221b23" name="patch/opDiaryPlugin/apps/pc_frontend/modules/diary/templates/showSuccess.php" role="data" />
+   <file baseinstalldir="/" md5sum="4220bcd47b847c11971703b868e4962d" name="web/css/tag.css" role="data" />
+   <file baseinstalldir="/" md5sum="1ba09030210b84ee465566717090f212" name="README" role="data" />
   </dir>
  </contents>
  <dependencies>
@@ -84,16 +93,16 @@
  <changelog>
   <release>
    <version>
-    <release>0.9.0</release>
-    <api>0.9.0</api>
+    <release>0.9.1</release>
+    <api>0.9.1</api>
    </version>
    <stability>
     <release>beta</release>
     <api>beta</api>
    </stability>
-   <date>2010-07-31</date>
+   <date>2011-03-26</date>
    <license>PHP</license>
-   <notes>beta release</notes>
+   <notes>second beta release</notes>
   </release>
  </changelog>
 </package>
