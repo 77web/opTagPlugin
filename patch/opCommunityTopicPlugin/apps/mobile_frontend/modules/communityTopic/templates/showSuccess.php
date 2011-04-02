@@ -1,6 +1,8 @@
 <?php $acl = opCommunityTopicAclBuilder::buildResource($communityTopic, array($sf_user->getMember())) ?>
 <?php op_mobile_page_title($community->getName(), $communityTopic->getName()) ?>
 
+<?php /* ** added for opNicePlugin ** */  include_customizes("topicDetailBox", "top"); ?>
+
 <?php echo op_within_page_link() ?>
 <?php echo op_format_date($communityTopic->getCreatedAt(), 'MM/dd HH:mm') ?>
 <?php if ($communityTopic->getMemberId() === $sf_user->getMemberId()): ?>
@@ -11,11 +13,10 @@
 <?php if ($communityTopic->isEditable($sf_user->getMemberId())): ?>
 &nbsp;[<?php echo link_to(__('Edit'), '@communityTopic_edit?id='.$communityTopic->getId()) ?>]
 <?php endif ?>
-<?php /* ** added for opTagPlugin ** */  include_customizes("topicBody", "top"); ?>
 <br>
 <?php echo nl2br($communityTopic->getBody()) ?><br>
 
-<?php /* ** added for opTagPlugin ** */  include_customizes("topicBody", "bottom"); ?>
+<?php /* ** added for opNicePlugin ** */  include_customizes("topicDetailBox", "bottom"); ?>
 
 <?php include_component('communityTopicComment', 'list', array('communityTopic' => $communityTopic)) ?>
 

@@ -5,6 +5,9 @@
 <div class="partsHeading">
 <h3><?php echo '['.$community->getName().'] '.__('Topic') ?></h3>
 </div>
+
+<?php /* ** added for opNicePlugin ** */  include_customizes("topicDetailBox", "top"); ?>
+
 <dl>
 <dt><?php echo nl2br(op_format_date($communityTopic->getCreatedAt(), 'XDateTimeJaBr')) ?></dt>
 <dd>
@@ -15,11 +18,9 @@
 <p><?php if ($_member = $communityTopic->getMember()) : ?><?php echo link_to($_member->getName(), 'member/profile?id='.$_member->getId()) ?><?php endif; ?></p>
 </div>
 <div class="body">
-<?php /* ** added for opTagPlugin ** */  include_customizes("topicBody", "top"); ?>
 <p class="text">
 <?php echo op_url_cmd(nl2br($communityTopic->getBody())) ?>
 </p>
-<?php /* ** added for opTagPlugin ** */  include_customizes("topicBody", "bottom"); ?>
 </div>
 </dd>
 </dl>
@@ -32,6 +33,9 @@
 </form>
 </div>
 <?php endif; ?>
+
+<?php /* ** added for opNicePlugin ** */  include_customizes("topicDetailBox", "bottom"); ?>
+
 </div>
 </div>
 

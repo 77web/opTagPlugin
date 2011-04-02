@@ -1,12 +1,14 @@
 <?php op_mobile_page_title(__('Diary of %1%', array('%1%' => $member->name)), $diary->title) ?>
 <?php use_helper('opDiary') ?>
 
+<?php /* **added for opNicePlugin** */ include_customizes("diaryDetailBox", "top"); ?>
+
 <?php echo op_within_page_link() ?>
 <?php echo op_format_date($diary->created_at, 'XDateTime') ?>
 <?php if ($diary->member_id === $sf_user->getMemberId()): ?>
 [<?php echo link_to(__('Edit'), 'diary_edit', $diary) ?>][<?php echo link_to(__('Delete'), 'diary_delete_confirm', $diary) ?>]
 <?php endif; ?><br>
-<?php /* **added for opTagPlugin** */ include_customizes("diaryBody", "top"); ?>
+
 <?php echo op_decoration(nl2br($diary->body)) ?><br>
 
 <?php if ($diary->has_images): ?>
@@ -15,7 +17,6 @@
 <?php endforeach; ?>
 <?php endif; ?>
 
-<?php /* **added for opTagPlugin** */ include_customizes("diaryBody", "bottom"); ?>
 (<?php echo $diary->getPublicFlagLabel() ?>)<br>
 
 
@@ -26,6 +27,9 @@
 <?php if ($diary->getNext($sf_user->getMemberId())): ?> <?php echo link_to(__('Next Diary'), 'diary_show', $diary->getNext($sf_user->getMemberId())) ?><?php endif; ?>
 </center>
 <?php endif; ?>
+
+
+<?php /* **added for opNicePlugin** */ include_customizes("diaryDetailBox", "bottom"); ?>
 
 <?php include_component('diaryComment', 'list', array('diary' => $diary)) ?>
 

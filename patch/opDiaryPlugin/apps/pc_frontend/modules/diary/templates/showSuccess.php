@@ -19,6 +19,8 @@
 </div>
 <?php endif; ?>
 
+<?php /* **added for opNicePlugin** */  include_customizes('diaryDetailBox', 'top'); ?>
+
 <dl>
 <dt><?php echo nl2br(op_format_date($diary->created_at, 'XDateTimeJaBr')) ?></dt>
 <dd>
@@ -26,7 +28,6 @@
 <p class="heading"><?php echo $diary->title; ?></p>
 </div>
 <div class="body">
-<?php /* **added for opTagPlugin** */  include_customizes('diaryBody', 'top'); ?>
 <?php if ($diary->has_images): ?>
 <?php $images = $diary->getDiaryImagesJoinFile() ?>
 <ul class="photo">
@@ -36,10 +37,13 @@
 </ul>
 <?php endif; ?>
 <?php echo op_url_cmd(op_decoration(nl2br($diary->body))) ?>
-<?php /* **added for opTagPlugin** */  include_customizes('diaryBody', 'bottom'); ?>
 </div>
 </dd>
 </dl>
+
+<?php /* **added for opNicePlugin** */  include_customizes('diaryDetailBox', 'bottom'); ?>
+
+
 <?php if ($diary->member_id === $sf_user->getMemberId()): ?>
 <div class="operation">
 <form action="<?php echo url_for('diary_edit', $diary) ?>">
