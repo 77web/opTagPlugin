@@ -3,3 +3,8 @@ This plugin provides OpenPNE3.x tag entry&save interface, tag cloud, tag search.
 depends on: opDiaryPlugin, opCommunityTopicPlugin
 
 tips & notes here: http://wiki.github.com/77web/opTagPlugin/
+
+
+!!注意!!
+ver0.9.2からopNicePluginとの関連の都合上、patchの内容とタグの表示位置を変更しました。
+通常、opTagPlugin-0.9.1以前のバージョンとopNicePluginは共存できませんのでお気を付け下さい。opTagPlugin-0.9.2はopNicePluginと共存できますが、日記詳細・トピック詳細各ページでのタグの表示位置が変更になっています。
